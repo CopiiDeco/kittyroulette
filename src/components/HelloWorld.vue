@@ -33,10 +33,12 @@ export default {
 },
 mounted() {
   this.getCatUrl();
-  window.addEventListener('keypress', this._keyListener);
+  window.addEventListener('keyup', this._keyListener);
+  window.addEventListener('click', this._keyListener);
 },
 beforeDestroy() {
-  window.removeEventListener('keypress', this._keyListener);
+  window.removeEventListener('keyup', this._keyListener);
+  window.removeEventListener('click', this._keyListener);
 }
 }
 
