@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="kitty">
     <img :src="this.catUrl" alt="Cat" />
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
 mounted() {
   this.getCatUrl();
   window.addEventListener('keyup', this._keyListener);
-  window.addEventListener('click', this._keyListener);
+  window.addEventListener('click', this._keyListener);  
 },
 beforeDestroy() {
   window.removeEventListener('keyup', this._keyListener);
